@@ -16,7 +16,7 @@ module AlphabeticalPaginate
     end
 
     def letters_regexp
-      russian? ? /[а-яА-Я]/ : /[a-zA-Z]/
+      russian? ? /[а-яА-Я]/ : ( german? ? /[a-zA-ZäöüÄÖÜß]/ : /[a-zA-Z]/ )
     end
 
     def default_letter
