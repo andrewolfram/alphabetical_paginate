@@ -11,6 +11,10 @@ module AlphabeticalPaginate
       defined?(I18n) && I18n.locale == :ru && code == :ru
     end
 
+    def german?
+      defined?(I18n) && I18n.locale == :de && code == :de
+    end
+
     def letters_regexp
       russian? ? /[а-яА-Я]/ : /[a-zA-Z]/
     end
@@ -25,6 +29,10 @@ module AlphabeticalPaginate
         letters = []
         "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЭЮЯ".each_char{ |x| letters << x }
         letters
+      elsif german?
+        letters = []
+        "AÄBCDEFGHIJKLMNOÖPQRSßTUÜVWXYZ".each_char{ |x| letters << x }
+        letters
       else
         ('A'..'Z').to_a
       end
@@ -37,7 +45,7 @@ module AlphabeticalPaginate
 
     # used in view_helper
     def all_field
-      russian? ? 'Все' : "All"
+      russian? ? 'Все' : (german? ? "Alle" : "All")
     end
   end
 end
