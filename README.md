@@ -119,7 +119,7 @@ Key | Value | Default |Description
 `:pagination_class` | `String` | `"pagination-centered"` | All the classes you would like to add to the rendered pagination selector div (for CSS purposes).
 `:js` | `Boolean` | `"true"` | If you want the javascript with page-rerendering to be enabled.
 `:support_language` | `Symbol` | `:en` | If you want russian letters support set this value to `:ru` (only if `I18n.locale` in your application set to `:ru`).
-`:bootstrap3` | `Boolean` | `false` | If you want to enable bootstrap 3 support
+`:bootstrap` | `Boolean` | `false` | If you want to enable bootstrap support
 
 ## Advanced Pagination
 

@@ -10,7 +10,7 @@ module AlphabeticalPaginate
                                                 batch_size: 500, db_mode: false, 
                                                 db_field: "id", include_all: true,
                                                 js: true, support_language: :en,
-                                                bootstrap3: false}
+                                                bootstrap: false}
       params[:paginate_all] ||= false
       params[:support_language] ||= :en
       params[:language] = AlphabeticalPaginate::Language.new(params[:support_language])
