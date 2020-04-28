@@ -77,7 +77,6 @@ module AlphabeticalPaginate
               links +
               (options[:bootstrap]  ? "" : "</ul>") +
               "</#{element}>"
-
       output += pagination
       output.html_safe
     end
